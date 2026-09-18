@@ -18,8 +18,8 @@ jobs:
       - name: Terraform init y apply (asegura que el ECR existe)
         working-directory: ./terraform
         run: |
-          terraform init
-          terraform apply -auto-approve
+          terraform init -backend-config=/home/natalia/terraform-secrets/backend.hcl -reconfigure
+          terraform apply -auto-approve -var-file=/home/natalia/terraform-secrets/terraform.tfvars
 
       - name: Tag y push al ECR emulado
         run: |
