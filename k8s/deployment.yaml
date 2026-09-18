@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: fastapi-container
-        image: 000000000000.dkr.ecr.us-east-1.localhost:5100/fastapi-app:db42363
+        image: 000000000000.dkr.ecr.us-east-1.localhost:5100/fastapi-app:d93cdf2
         ports:
         - containerPort: 8000
