@@ -17,6 +17,11 @@ jobs:
       - name: Obtener el hash del commit
         run: echo "IMAGE_TAG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
+      - name: Instalar dependencias y correr tests
+        run: |
+          pip install -r requirements.txt
+          pytest
+        
       - name: Build de la imagen Docker
         run: docker build -t fastapi-app:${{ env.IMAGE_TAG }} .
 
