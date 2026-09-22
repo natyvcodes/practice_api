@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Bienvenida a la cultura DevOps"}
+    return {"message": "Bienvenida a la cultura DevOp"}
