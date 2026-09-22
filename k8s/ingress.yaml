@@ -3,8 +3,9 @@ kind: Ingress
 metadata:
   name: fastapi-ingress
 spec:
+  ingressClassName: nginx
   rules:
-  - host: fastapi.local
+  - host: fastapi.qaliby.com
     http:
       paths:
       - path: /
@@ -14,3 +15,5 @@ spec:
             name: fastapi-service
             port:
               number: 8000
+
+
